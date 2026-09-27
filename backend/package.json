@@ -1,0 +1,30 @@
+{
+  "name": "aws-devops-capstone-backend",
+  "version": "1.0.0",
+  "description": "Backend API for AWS DevOps Capstone Project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"No tests configured yet\" && exit 0"
+  },
+  "keywords": [
+    "aws",
+    "devops",
+    "docker",
+    "kubernetes",
+    "terraform"
+  ],
+  "author": "Kushi Jeej",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
