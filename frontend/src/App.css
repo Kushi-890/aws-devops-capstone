@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #111827;
+    color: white;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.status {
+    background: #14532d;
+    color: #bbf7d0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 50px 0;
+    flex: 1;
+}
+
+.hero {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.hero p {
+    color: #64748b;
+    line-height: 1.7;
+    max-width: 750px;
+}
+
+.architecture,
+.users {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.architecture h2,
+.users h2 {
+    margin-top: 0;
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+    color: #64748b;
+}
+
+.arrow {
+    font-size: 28px;
+    color: #64748b;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+.user-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.user-card p {
+    color: #475569;
+}
+
+.user-card small {
+    color: #64748b;
+}
+
+.error {
+    color: #b91c1c;
+    background: #fee2e2;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #111827;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .architecture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+
+    .hero,
+    .architecture,
+    .users {
+        padding: 24px;
+    }
+}
