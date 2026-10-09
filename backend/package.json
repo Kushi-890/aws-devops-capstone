@@ -1,3 +1,4 @@
+
 {
   "name": "aws-devops-capstone-backend",
   "version": "1.0.0",
@@ -6,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "echo \"No tests configured yet\" && exit 0"
+    "test": "node --test"
   },
   "keywords": [
     "aws",
@@ -25,6 +26,7 @@
     "pg": "^8.16.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "supertest": "^7.3.1"
   }
 }
