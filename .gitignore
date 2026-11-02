@@ -46,3 +46,6 @@ coverage/
 # Local database backups
 *.dump
 *.sql.gz
+# Additional security
+*.pem
+*.tfplan
