@@ -5,9 +5,9 @@ services:
     container_name: capstone-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: capstone_db
-      POSTGRES_USER: capstone_user
-      POSTGRES_PASSWORD: capstone_password
+       POSTGRES_DB: ${POSTGRES_DB}
+       POSTGRES_USER: ${POSTGRES_USER}
+       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -29,7 +29,7 @@ services:
       DB_PORT: 5432
       DB_NAME: capstone_db
       DB_USER: capstone_user
-      DB_PASSWORD: capstone_password
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5000:5000"
     depends_on:
