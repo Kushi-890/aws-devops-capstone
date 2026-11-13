@@ -27,6 +27,12 @@ pipeline {
                 }
             }
         }
+        stage('Docker Image Build') {
+            steps {
+                bat 'docker build -t capstone-backend:latest ./backend'
+                bat 'docker build -t capstone-frontend:latest ./frontend'
+            }
+        }
     }
 
     post {
