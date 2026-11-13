@@ -14,6 +14,7 @@ pipeline {
                 bat 'node --version'
                 bat 'npm --version'
                 bat 'git --version'
+                bat 'docker --version'
             }
         }
 
