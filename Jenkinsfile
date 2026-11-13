@@ -15,6 +15,7 @@ pipeline {
                 bat 'npm --version'
                 bat 'git --version'
                 bat 'docker --version'
+                bat 'docker info'
             }
         }
 
