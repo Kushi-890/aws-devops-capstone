@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: capstone-backend:latest
+          image: capstone-backend:v2
           imagePullPolicy: Never
           resources:
             requests:

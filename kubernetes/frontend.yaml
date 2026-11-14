@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: capstone-frontend:latest
+          image: capstone-frontend:v2
           imagePullPolicy: Never
           ports:
             - containerPort: 5173
