@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,10 +16,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: capstone-frontend:v2
+          image: capstone-frontend:production-v1
           imagePullPolicy: Never
           ports:
-            - containerPort: 5173
+            - containerPort: 80
 
 ---
 apiVersion: v1
@@ -30,6 +31,6 @@ spec:
   selector:
     app: frontend
   ports:
-    - port: 5173
-      targetPort: 5173
+    - port: 80
+      targetPort: 80
   type: NodePort
