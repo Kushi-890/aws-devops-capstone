@@ -66,6 +66,8 @@ PersistentVolumeClaim
 
 Health probes
 
+The production frontend is built using a multi-stage Dockerfile and served through Nginx on port 80, with API requests proxied to the backend Kubernetes Service.
+
 To inspect the resources:
 
 kubectl get pods -n capstone
@@ -74,11 +76,11 @@ kubectl get deployments -n capstone
 
 To access the frontend locally using port forwarding:
 
-kubectl port-forward -n capstone service/frontend 8081:5173
+kubectl port-forward -n capstone service/frontend 8082:80
 
 Then open:
 
-http://127.0.0.1:8081
+http://127.0.0.1:8082
 
 5. Terraform Validation
 
