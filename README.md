@@ -78,19 +78,24 @@ aws-devops-capstone/
 
 ## 7. AWS Infrastructure
 
-AWS infrastructure was provisioned and tested as part of the capstone project.
+AWS infrastructure was provisioned using Terraform and deployed on Amazon Web Services.
 
-Terraform configurations include:
+Infrastructure components include:
 
 - AWS Virtual Private Cloud (VPC)
 - Public and private subnets across two Availability Zones
 - Internet Gateway and route tables
-- Amazon EKS cluster configuration
+- Amazon EKS cluster
 - Managed EKS worker node group
-- IAM roles for EKS
-- Amazon ECR repositories for Docker images
+- IAM roles and policies
+- Amazon ECR repositories
+- Amazon EBS persistent storage using the EBS CSI driver
 
-The EKS cluster and managed node group were successfully created and later destroyed to avoid ongoing infrastructure costs. The AWS networking configuration and ECR repositories were retained.
+The application was successfully deployed on Amazon EKS using Kubernetes.
+
+The PostgreSQL database uses persistent EBS storage. Kubernetes Secrets manage database credentials, while ConfigMaps provide application configuration.
+
+The frontend, backend, and PostgreSQL services were verified successfully within the EKS cluster.
 
 The application was independently deployed and verified end-to-end on a local Kind Kubernetes cluster.
 
@@ -110,12 +115,14 @@ The application was independently deployed and verified end-to-end on a local Ki
 - [x] GitHub Actions CI/CD workflow
 - [x] Jenkins CI/CD pipeline
 - [x] Amazon ECR image publishing
-- [x] Terraform AWS networking configuration
-- [x] Amazon EKS cluster and node group provisioning
-- [x] Terraform formatting and validation
-- [x] Local end-to-end application verification
+- [x] Terraform AWS infrastructure provisioning
+- [x] Amazon EKS cluster and managed node group
+- [x] Kubernetes frontend and backend deployment on EKS
+- [x] PostgreSQL deployment with EBS persistent storage
+- [x] Kubernetes ConfigMaps and Secrets
+- [x] Backend health and database connectivity verification
+- [x] End-to-end AWS EKS application testing
 - [x] Project documentation
-- [ ] Final end-to-end AWS EKS application verification
 
 ## 10. Application Screenshots
 
@@ -127,6 +134,14 @@ The application was independently deployed and verified end-to-end on a local Ki
 
 ### Backend Health Check
 ![Health Check](screenshots/backend-health-check.png)
+### Kubernetes Pods
+![Kubernetes Pods](screenshots/04-kubernetes-pods.png)
+
+### PostgreSQL Database
+![PostgreSQL Database](screenshots/postgresql-database.png)
+
+### GitHub Actions Pipeline
+![GitHub Actions](screenshots/github-actions-success.png)
 
 ## 11. Author
 **Kushi Jeej**
