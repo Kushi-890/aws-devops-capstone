@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: capstone-frontend:production-v1
-          imagePullPolicy: Never
+          image: 991856306777.dkr.ecr.ap-south-1.amazonaws.com/capstone-frontend:production-v1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
 
@@ -33,4 +33,4 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-  type: NodePort
+  type: ClusterIP

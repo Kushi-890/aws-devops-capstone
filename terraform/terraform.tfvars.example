@@ -1,0 +1,7 @@
+aws_region = "ap-south-1"
+
+eks_cluster_role_arn = "arn:aws:iam::YOUR_ACCOUNT_ID:role/CapstoneEKSClusterRole"
+
+eks_node_role_arn = "arn:aws:iam::YOUR_ACCOUNT_ID:role/CapstoneEKSNodeRole"
+
+eks_public_access_cidrs = ["YOUR_PUBLIC_IP/32"]

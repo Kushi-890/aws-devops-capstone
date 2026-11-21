@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: backend
-          image: capstone-backend:v2
-          imagePullPolicy: Never
+          image: 991856306777.dkr.ecr.ap-south-1.amazonaws.com/capstone-backend:v2
+          imagePullPolicy: IfNotPresent
           resources:
             requests:
               cpu: "100m"
